@@ -1,22 +1,31 @@
 ---
 import { Image } from "astro:assets";
-
+import '../styles/global.css';
+const pageTitle="About Me";
+const paragraph_text="Good software is built with a single person while great software is built with teams. I'm happy with good software..."
+const second_paragraph="A software engineer who is currently working in a sweatshop and is trying to reclaim his lost love for development"
+const skills=["Web Dev?","Enterprise Java Dev","SelfHosting"]
+import Header from '../components/Header.astro'
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+        <title>{pageTitle}</title>
+        <style>
+            .skill{
+                color:green;
+                font-weight:bold;
+            }
+        </style>
     </head>
     <body>
-        <a href="/astro-test">Home</a>
-        <a href="/astro-test/about">About</a>
-        <a href="/astro-test/blog">Blog</a>
-        <h1>About Me</h1>
-        <h2>Good software is built with a single person while great software is built with teams. I'm happy with good software...</h2>
-        <h3>A software engineer who is currently working in a sweatshop and is trying to reclaim his lost love for development</h3> 
+        <Header/>
+        <h1>{pageTitle}</h1>
+        <p>{paragraph_text}<p>
+        <p>{second_paragraph}</p>
+        <p>My skills include:</p>
+        <ul>{skills.map((item)=><li class="skill">{item}</li>)}</ul> 
     </body>
 </html>

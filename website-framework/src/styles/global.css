@@ -1,0 +1,23 @@
+html {
+  background-color: #161515;
+  font-family: 'Consolas','Times New Roman', Times, serif;
+}
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
+p{
+    color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+    color: purple;
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}

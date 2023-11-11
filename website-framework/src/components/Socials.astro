@@ -1,0 +1,17 @@
+---
+const {website,username}=Astro.props;
+---
+<style>
+a{
+    color:white;
+    text-decoration: none;
+    border-radius: 10px 15px;
+    background-color: purple;
+    border:1px dashed white;
+    padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+    /* margin: 0.2rem; adds space between each link */
+    
+}
+</style>
+
+<a href={`https://www.${website}.com/${username}`}>{website}</a>

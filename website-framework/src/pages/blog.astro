@@ -1,5 +1,8 @@
 ---
 import { Image } from "astro:assets";
+import '../styles/global.css';
+const pageTitle="Blog List";
+import Header from '../components/Header.astro'
 ---
 
 <html lang="en">
@@ -8,19 +11,24 @@ import { Image } from "astro:assets";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+        <title>{pageTitle}</title>
     </head>
+     <style>
+            h2{
+                color:green;
+                font-weight:bold;
+            }
+        </style>
     <body>
-        <a href="/astro-test">Home</a>
-        <a href="/astro-test/about">About</a>
-        <a href="/astro-test/blog">Blog</a>
+        <Header/>
         <h1>The ramblings start here</h1>
+        <!-- Could reuse below as a single card component  -->
         <h2>
-            The journey behind building this website
+            The <a href="/astro-test/blog-posts/creating-website">journey</a> behind building this website
         </h2>
-        <h3>
-            From dealing wih broken node versions to figuring out deployment, Windows sucking as a dev env...the list goes on
-        </h3>
-        <h4>If everyone and their dog has a website, what's stopping me?</h4>
+        <p>
+            From dealing wih broken node versions and wrangling css to figuring out deployment, Windows sucking as a dev env...the list goes on
+        </p>
+        <p>If everyone and their dog has a website, what's stopping me?</p>
     </body>
 </html>
